@@ -12,3 +12,4 @@
 */
 // メソッド定義の前に@をつける
 Route::get('/', 'Postcontroller@index');
+Route::get('/posts/{post}', 'Postcontroller@show');

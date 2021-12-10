@@ -14,4 +14,8 @@ class Postcontroller extends Controller
         // WithでPostテーブルにある取得件数を制御した関数データをGet（ページネーション）
         return view('posts/index') -> with(['posts'=> $post -> getPaginateByLimit()]);
     }
+    public function show(Post $post)
+    {
+        return view('posts/show')->with(['post' => $post]);
+    }
 }
