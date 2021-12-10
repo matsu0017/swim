@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+// メソッド定義の前に@をつける
+Route::get('/', 'Postcontroller@index');
+// ルーティングは通常上から読み込まれるのでcreateをshowの上に
+Route::get('/posts/create', 'Postcontroller@create');
+Route::post('/posts', 'Postcontroller@store');
+Route::get('/posts/{post}', 'Postcontroller@show');
