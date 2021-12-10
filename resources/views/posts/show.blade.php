@@ -14,7 +14,7 @@
         </h1>
         <div class="content">
             <div class="content__post">
-                <h3>本文</h3>
+                <h3>学習内容</h3>
                 <p>{{ $post->body }}</p>    
             </div>
         </div>
